@@ -1,0 +1,119 @@
+body { 
+    padding: 0;
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(225, 100%, 94%);
+    position: relative;
+    z-index: -2;
+}
+main::before {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background-image: url(./pattern-background-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    z-index: -1;
+}
+main .box {
+    width: 375px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+main .box .image {
+    max-width: 100%;
+}
+main .box .head {
+    width: 300px;
+    margin: 40px auto;
+}
+main .box .head h2 {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+main .box .head p {
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    margin-bottom: 30px;
+}
+main .box .info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: hsl(225, 100%, 98%);
+}
+main .box .info img {
+    margin-right: 15px;
+}
+main .box .info .content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+main .box .info .content .plan {
+    transform: translatey(-15px);
+    font-weight: 900;
+    font-size: 16px;
+    position: relative;
+}
+main .box .info .content .plan::before {
+    content: "$59.99/year";
+    color:  hsl(224, 23%, 55%);
+    position: absolute;
+    top: 25px;
+    left: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+main .box .info .content a {
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+main .box .info .content a:active {
+    color: hsl(245, 75%, 52%);
+    font-size: 50px;
+    text-decoration: none;
+}
+main .box .order {
+    display: block;
+    width: 300px;
+    padding: 10px 0;
+    margin: 20px auto;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px hsl(225, 100%, 94%);
+    transition: 0.3s;
+}
+main .box .order:active {
+    color: hsl(245, 75%, 52%);
+}
+main .box .cancel {
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+    color: hsl(224, 23%, 55%);
+    margin-bottom: 30px;
+    font-weight: 700;
+    transition: 0.3s
+}
+main .box .cancel:active {
+    color: hsl(223, 47%, 23%);
+}
